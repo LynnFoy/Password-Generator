@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Password-Generator</title>
+</head>
+<body>
+  <div class="container">
+    <div class="password-generator">
+      <h2>Password Generator</h2>
+      <div class="input-group">
+        <label for="length">Password Length</label>
+        <input type="number" id="length" value="20" min="10" max="20">
+      </div>
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="uppercase" checked> Include uppercase letters</label>
+        <label><input type="checkbox" id="lowercase" checked> Include lowercase letters</label>
+        <label><input type="checkbox" id="numbers" checked> Include numbers</label>
+        <label><input type="checkbox" id="symbols" checked> Include symbols</label>
+      </div>
+      <button id="generate">Generate Password</button>
+      <div class="result">
+        <input type="text" id="password" readonly>
+        <button id="copy" title="Copy to clipboard">
+          <i class="fa-regular fa-clipboard"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alerte -->
+  <div class="alert-overlay" id="alert-overlay">
+    <div class="alert-box">
+      <i class="fa-solid fa-circle-check alert-icon"></i>
+      <p class="alert-message">Password copied to clipboard!</p>
+      <button id="alert-ok">OK</button>
+    </div>
+  </div>
+
+  <script src="public/javascript/main.js"></script>
+</body>
+</html>
+
+
+
